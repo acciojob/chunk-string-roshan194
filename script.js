@@ -1,5 +1,5 @@
 function stringChop(str, size) {
-    if (size <= 0) return []; // Handle invalid chunk size
+    if (!str || size <= 0) return []; // Handle null, undefined, or invalid size
     const chunks = [];
 
     for (let i = 0; i < str.length; i += size) {
@@ -8,6 +8,8 @@ function stringChop(str, size) {
 
     return chunks;
 }
+
+    
 
 // Do not change the code below
 const str = prompt("Enter String.");
